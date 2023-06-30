@@ -1,0 +1,42 @@
+{
+  "name": "@soeunlee/modal",
+  "version": "1.0.0",
+  "description": "A simple customisable react modal component",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run prettier && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soun1005/reactjs-modal.git"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "reactjs",
+    "reactmodal"
+  ],
+  "author": "Soeun Lee",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  }
+}
