@@ -1,7 +1,7 @@
 import React, { MouseEventHandler, ReactNode } from 'react';
 
 type Props = {
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClose: MouseEventHandler<HTMLButtonElement>;
   backgroundClass: string;
   containerClass: string;
   bodyClass: string;
@@ -10,10 +10,11 @@ type Props = {
   btnLabel: string;
   btnLabelClass: string;
   children: ReactNode;
+  setModalOpen: boolean;
 };
 
 const Modal: React.FC<Props> = ({
-  onClick,
+  onClose,
   backgroundClass,
   containerClass,
   bodyClass,
@@ -22,14 +23,18 @@ const Modal: React.FC<Props> = ({
   btnLabel,
   btnLabelClass,
   children,
+  setModalOpen,
 }) => {
+  if (!setModalOpen) {
+    return null;
+  }
   return (
-    <div className={backgroundClass}>
-      <div className={containerClass}>
+    <div className={`background ${backgroundClass}`}>
+      <div className={`container ${containerClass}`}>
         <div className={bodyClass}>{children}</div>
         <div className={footerClass}>
-          <button className={btnClass} onClick={onClick}>
-            <span className={btnLabelClass}>{btnLabel}</span>
+          <button className={`btn ${btnClass}`} onClick={onClose}>
+            <span className={`btnLabel ${btnLabelClass}`}>{btnLabel}</span>
           </button>
         </div>
       </div>

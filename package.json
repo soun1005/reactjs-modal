@@ -1,5 +1,5 @@
 {
-  "name": "@soeunlee/modal",
+  "name": "@soeunlee/reactjs-modal",
   "version": "1.0.0",
   "description": "A simple customisable react modal component",
   "main": "./dist/cjs/index.js",

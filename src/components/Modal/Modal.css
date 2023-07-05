@@ -1,0 +1,35 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  height: 7rem;
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.25rem;
+  background-color: rgba(212, 212, 212, 0.8);
+  padding: 0.25rem 0;
+}
+
+.btn {
+  width: 5rem;
+  border-radius: 20px;
+  background-color: rgb(8, 132, 176);
+  padding: 0.25rem 0;
+}
+
+.btnLabel {
+  color: rgb(245, 250, 255);
+  font-weight: 500;
+}
