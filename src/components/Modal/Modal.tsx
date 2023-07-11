@@ -3,6 +3,9 @@ import styles from './Modal.module.css';
 
 type Props = {
   onClose: MouseEventHandler<HTMLButtonElement>;
+  children: ReactNode;
+  setModalOpen: boolean;
+  // class names
   backgroundClass?: string;
   containerClass?: string;
   bodyClass?: string;
@@ -10,14 +13,14 @@ type Props = {
   btnClass?: string;
   btnLabel: string;
   btnLabelClass?: string;
-  children: ReactNode;
-  setModalOpen: boolean;
 };
 
 const { background, container, btn, btnMsg } = styles;
 
 const Modal: React.FC<Props> = ({
   onClose,
+  children,
+  setModalOpen,
   backgroundClass,
   containerClass,
   bodyClass,
@@ -25,8 +28,6 @@ const Modal: React.FC<Props> = ({
   btnClass,
   btnLabel,
   btnLabelClass,
-  children,
-  setModalOpen,
 }) => {
   if (!setModalOpen) {
     return null;
