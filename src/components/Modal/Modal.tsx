@@ -8,7 +8,7 @@ type Props = {
   bodyClass?: string;
   footerClass?: string;
   btnClass?: string;
-  btnLabel?: string;
+  btnLabel: string;
   btnLabelClass?: string;
   children: ReactNode;
   setModalOpen: boolean;
